@@ -1,6 +1,17 @@
 import { Plugin, Compiler } from 'webpack';
 
 export interface SentryCliPluginOptions {
+  // general configuration for sentry-cli
+
+  // Sentry instance
+  url?: string;
+  // Authentication token for API
+  authToken?: string;
+  // Organization slug
+  org?: string;
+  // Project slug
+  project?: string;
+
   /**
    * Unique name of a release, must be a string, should uniquely identify your release,
    * defaults to sentry-cli releases propose-version command which should always return the correct version
